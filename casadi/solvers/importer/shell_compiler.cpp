@@ -146,7 +146,7 @@ namespace casadi {
     if (mkstemps(obj_name, 2) == -1) {
       casadi_error("Failed to create a temporary object file name");
     }
-    std::string obj_name_ = obj_name;
+    obj_name_ = obj_name;
 
     char bin_name[] = "tmp_casadi_compiler_shell_XXXXXX.so";
     if (mkstemps(bin_name, 3) == -1) {
