@@ -158,6 +158,11 @@ namespace casadi {
     char* bin_name = tempnam(0, "ca.so");
     bin_name_ = bin_name;
     free(bin_name);
+
+    // Fallback, may result in deprecation warnings
+    char* obj_name = tempnam(0, "ca.o");
+    obj_name_ = obj_name;
+    free(obj_name);
 #endif
 
     // Have relative paths start with ./
